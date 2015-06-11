@@ -12,6 +12,7 @@
 
 ######Week 2 - R Programming for the Data Scientist
 - [ ] Getting Started Powerpoint
+- [x] Fibonacci Program with Unlimited Lenth
 - [ ] Level 2
 - [x] Track Learning Progress on GitHub
 
