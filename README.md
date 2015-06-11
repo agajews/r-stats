@@ -8,7 +8,7 @@
 - [x] Setup GitHub Repository
 - [x] Asked for Username for Sharing
 - [ ] Videos 2.8-2.9
-- [ ] Shared GitHub Repository
+- [x] Shared GitHub Repository
 
 ######Week 2 - R Programming for the Data Scientist
 - [ ] Getting Started Powerpoint
