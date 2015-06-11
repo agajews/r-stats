@@ -1,6 +1,6 @@
 # r-stats
 ####By Alex Gajewski
-######My repository for tracking my progress with learning R as a language for statistically analyzing data.
+######A repository for the purpose of tracking my progress in learning R as a tool for data analysis.
 
 #####Week 1 - Learning Basic Data Scientist Tools
 - [x] Videos 1.1-2.7
