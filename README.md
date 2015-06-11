@@ -15,6 +15,7 @@
 - [x] Fibonacci Program
 - [x] Level 2
 - [x] Track Learning Progress on GitHub
+- [x] Fibonacci Program V2 :)
 
 #####Weeks 3 and 4 - Real Project|Detection of differentially expressed genes using Affymetrix gene expression technology, from raw data to statistically significant differentially expressed genes
 - [ ] Raw Data QC and Filtering
