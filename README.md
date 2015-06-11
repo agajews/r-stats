@@ -13,7 +13,7 @@
 ######Week 2 - R Programming for the Data Scientist
 - [x] Getting Started Powerpoint
 - [x] Fibonacci Program
-- [ ] Level 2
+- [x] Level 2
 - [x] Track Learning Progress on GitHub
 
 ######Weeks 3 and 4 - Real Project|Detection of differentially expressed genes using Affymetrix gene expression technology, from raw data to statistically significant differentially expressed genes
