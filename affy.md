@@ -1,9 +1,8 @@
 #####Load Data
-- library(c(GEOquery,simpleaffy,RColorBrewer,affyPLM,rgl,limma,annotate,hgu133plus2.dm)) (But not with that syntax!)
-- Change into working directory (setwd)
-
+- library("GEOquery","simpleaffy","RColorBrewer","affyPLM","rgl","limma","annotate","hgu133plus2.db")
+- setwd("/home/alex/Documents/**HUVEC**")
 - Make /data/ directory with .CEL files
-- Make phenodata.txt file with tab-delimited text in Excel
+- Make phenodata.txt file with tab-delimited text in Excel with columns Name,Filename,Target and one row for each .CEL file
 
 #####Normalize Data
 - cellfiles<-read.affy(covdesc="phenodata.txt",path="data")
