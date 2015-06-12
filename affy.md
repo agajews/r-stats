@@ -8,19 +8,19 @@
 - cellfiles<-read.affy(covdesc="phenodata.txt",path="data")
 - cellfiles.gcrma<-gcrma(cellfiles)
 
-####Quality Control Normalized Data
+######Quality Control Normalized Data
 - boxplot(cellfiles,col=rainbow(12))
 - boxplot(cellfiles.gcrma,col=rainbow(12))
 - hist(cellfiles,col=rainbow(12))
 - hist(cellfiles.gcrma,col=rainbow(12))
 
-####Clusters
+######Clusters
 - eset<-exprs(celfiles.gcrma)
 - distance<-dist(t(eset),method="maximum")
 - clusters<-hclust(distance)
 - plot(clusters)
 
-####PCA
+######PCA
 - pca<-prcomp(t(filterEset),scale=T)
 - myColors <-c("Blue", "yellow", "yellow", "Blue", "yellow", "Blue", rep("Red", 3), rep("Green", 3))
 - plot3d(pca$x[, 1:3], col=myColors, xlab="PC1", ylab = "PC2", zlab = "PC3", type = "s")
@@ -45,7 +45,7 @@
 - cellSamples<-subset(cellfiles.gcrma$FileName,(cellfiles.gcrma$Target=="**huvec**")|(cellfiles.gcrma$Target=="**choroid**"))
 - cellData<-filterEset[rownames(filterEset) %in% rownames(probeset.list.selected),colnames(filterEset) %in% cellSamples]
 
-####Generate Heatmap
+######Generate Heatmap
 - pdf(file="Heatmap.pdf",width=8,height=6)
 - heatmap(cellData,labRow=c(""),col=topo.colors(16),cexCol=0.6)
 - graphics.off()
@@ -55,6 +55,6 @@
 - results<-cbind(probeset.list.selected,gene.symbols)
 - write.table(results,"results.txt",sep="\t",quote=F)
 
-####Clean Up Workspace
+######Clean Up Workspace
 - save.image()
 - sessionInfo()
