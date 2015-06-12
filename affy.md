@@ -1,4 +1,4 @@
-#####Load Data //Required
+#####**Load Data** //Required
 - library("GEOquery","simpleaffy","RColorBrewer","affyPLM","rgl","limma","annotate","hgu133plus2.db")
 - setwd("/home/alex/Documents/**HUVEC**")
 - Make /data/ directory with .CEL files
