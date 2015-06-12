@@ -40,7 +40,7 @@ rep("SkyBlue", 3)#KO samples
 - write.table(selDataMatrix,file="Data-Matrix-NQ-filtered.txt", quote=FALSE, sep = "\t")
 - probeList <- rownames(selDataMatrix)
 
-#####Select Two Rows of Data //Required
+#####Select Two Sets (Six Rows) of Data //Required
 - mData <- selDataMatrix[, **c(1,2,3,10,11,12)**]
 - mDataPheno<-phenod[**c(1,2,3,10,11,12)**, 4]
 - design <- model.matrix(~ factor(mDataPheno, levels=c("**Ctrl**", "**24hr**")))
