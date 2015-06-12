@@ -73,7 +73,7 @@ rep("SkyBlue", 3)#KO samples
 - Symbol <- getSYMBOL(nuID, 'lumiMouseAll')
 - Name <- as.character(lookUp(nuID, 'lumiMouseAll', "GENENAME"))
 - Ensembl <- as.character(lookUp(nuID, 'lumiMouseAll', "ENSEMBL"))
-- Ensembl <- ifelse(Ensembl=="NA", NA, paste("<a href='http://useast.ensembl.org/Mus_musculus/Gene/Summary?g=", Ensembl, "'>", Ensembl, "</a>", sep=""))
+- Ensembl <- ifelse(Ensembl=="NA", NA, paste("<a href='**://**useast.ensembl.org/Mus_musculus/Gene/Summary?g=", Ensembl, "'>", Ensembl, "</a>", sep=""))
 - tmp <- data.frame(ID=nuID, Symbol=Symbol, Name=Name, logFC=tab.sig$logFC, pValue=tab.sig$P.Value, FDR=tab.sig$adj.P.Val, Ensembl=Ensembl)
 - row.names(tmp)<-NULL
 - HTML(tmp, "out.html", append=FALSE)
