@@ -41,7 +41,7 @@
 - probeset.list.general<-topTable(ebFits,coef=1,number=nrow(filterEset),lfc=0)
 
 #####Select Probesets //Required
-- probeset.list.selected<-probeset.list.general[(probeset.list$adj.P.Val<=**0.05**)&(abs(probeset.list.general$logFC)>=**2**), ]
+- probeset.list.selected<-probeset.list.general[(probeset.list.general$adj.P.Val<=**0.05**)&(abs(probeset.list.general$logFC)>=**2**), ]
 - cellSamples<-subset(cellfiles.gcrma$FileName,(cellfiles.gcrma$Target=="**huvec**")|(cellfiles.gcrma$Target=="**choroid**"))
 - cellData<-filterEset[rownames(filterEset) %in% rownames(probeset.list.selected),colnames(filterEset) %in% cellSamples]
 
