@@ -47,7 +47,7 @@ rep("SkyBlue", 3)#KO samples
 - colnames(design) <- c("**Ctrl**", "**24hrvsCtrl**")
 
 #####Generate Linear Model //Required
-- fit <- lmFit(M6data, design)
+- fit <- lmFit(mData, design)
 - fit <- eBayes(fit)
 - tab <- topTable(fit, coef = 2, adjust = "fdr", n = dim(mData)[1])
 - ID <- rownames(tab)
