@@ -1,4 +1,4 @@
-geneProfilingIllumina=function(input.expressionfile,sep,input.phenofile,norm,filter.bool,filter.int,phenoline.start,phenoline.finish,phenoname.ctrl,phenoname.var,pval,fcval,heatmap.out,genes.out){
+geneProfilingHumans=function(input.expressionfile,sep,input.phenofile,norm,filter.bool,filter.int,phenoline.start,phenoline.finish,phenoname.ctrl,phenoname.var,pval,fcval,heatmap.out,genes.out){
   require("limma")
   require("lumi")
   require("AnnotationDbi")
@@ -7,7 +7,7 @@ geneProfilingIllumina=function(input.expressionfile,sep,input.phenofile,norm,fil
   require("ggplot2")
   require("annotate")
   require("R2HTML")
-  message ("Example Parameters: geneProfilingIllumina("S24-GSdata-noNorm.txt",",","Phenod.txt","rsn",F,19,1,6,"CEM_PLAIN","CEM_SUV",0.20,1.3,"Heatmap-test.pdf","Genes-test.txt")")
+  #message ("Example Parameters: geneProfilingIllumina("S24-GSdata-noNorm.txt",",","Phenod.txt","rsn",F,19,1,6,"CEM_PLAIN","CEM_SUV",0.20,1.3,"Heatmap-test.pdf","Genes-test.txt")")
   phenod<-read.table(input.phenofile, header=T, stringsAsFactors=FALSE, row.names=1, sep=sep)
   message ("Read Pheno Data")
   annotation=read.table("annotation.txt",header=T,sep=",",stringsAsFactors=F,fill=T)
@@ -33,7 +33,7 @@ geneProfilingIllumina=function(input.expressionfile,sep,input.phenofile,norm,fil
   rgl.postscript("PCA.pdf", fmt="pdf", drawText=TRUE)
   dataMatrix <- exprs(lumi.N.Q)
   presentCount <- detectionCall(x.lumi)
-  if(filter.bool == TRUE) dataMatrix <- dataMatrix[presentCount > 19,]
+  if(filter.bool == TRUE) dataMatrix <- dataMatrix[presentCount > filter.int,]
   mData <- dataMatrix[, phenoline.start:phenoline.finish]
   mDataPheno<-phenod[phenoline.start:phenoline.finish, 1]
   design <- model.matrix(~ factor(mDataPheno, levels=c(phenoname.ctrl, phenoname.var)))
@@ -44,10 +44,10 @@ geneProfilingIllumina=function(input.expressionfile,sep,input.phenofile,norm,fil
   tab.sig.in=tab.sig[rownames(tab.sig) %in% annotation$PROBE_ID,]
   mDataSig.in<-mData[rownames(mData) %in% rownames(tab.sig.in),]
   symbols=""
-  for (i in 0:(nrow(tab.sig.4.sf.in)) ) 
+  for (i in 0:(nrow(mDataSig.in)) ) 
     symbols[i]=annotation$TargetID[annotation$PROBE_ID %in% rownames(mDataSig.in)[i]]
-  pdf("heatmap.pdf")
-  heatmap(mDataSig, labRow=symbols, col=topo.colors(16), cexCol=0.6)
+  pdf(heatmap.out)
+  heatmap(mDataSig.in, labRow=symbols, col=topo.colors(16), cexCol=0.6)
   dev.off()
   symbols.table=""
   for (i in 0:(nrow(tab.sig.in)) ) 
