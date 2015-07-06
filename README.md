@@ -17,13 +17,16 @@
 - [x] Track Learning Progress on GitHub
 - [x] Fibonacci Program V2 :)
 - [x] Install Affy Packages|Setup Affy Environment
-- [ ] Analysis of Affymetrix Microarray Data with R and Bioconductor
+- [x] Analysis of Affymetrix Microarray Data with R and Bioconductor
 
 #####Weeks 3 and 4 - Real Project|Detection of differentially expressed genes using Affymetrix gene expression technology, from raw data to statistically significant differentially expressed genes
-- [ ] Raw Data QC and Filtering
-- [ ] Data Summarization and Normalization
-- [ ] Sample/Gene/Probe-Based QC
-- [ ] Differentially Expressed Genes
+- [x] Raw Data QC and Filtering
+- [x] Data Summarization and Normalization
+- [x] Sample/Gene/Probe-Based QC
+- [x] Differentially Expressed Genes
+- [x] Created Summary
+
+######Finished in 1.4 Weeks, Difficult Work Ahead
 
 #####Weeks 5 to 8 - Real Project
 - [ ] Use machine learning methods in R to detect and validate (training and testing) a minimal gene signature able to classify the gene expression of samples in two phenotypic groups
