@@ -24,6 +24,7 @@
 - pca<-prcomp(t(filterEset),scale=T)
 - myColors <-c("Blue", "yellow", "yellow", "Blue", "yellow", "Blue", rep("Red", 3), rep("Green", 3))
 - plot3d(pca$x[, 1:3], col=myColors, xlab="PC1", ylab = "PC2", zlab = "PC3", type = "s")
+- rgl.postscript("PCA.pdf", fmt="pdf", drawText=TRUE)
 
 #####Filter Data //Required
 - cellfiles.filtered<-nsFilter(cellfiles.gcrma,require.entrez=F,remove.dupEntrez=F)
